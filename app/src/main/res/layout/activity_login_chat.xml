@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:background="@drawable/bg"
+    style="@style/MatchParent">
+
+    <LinearLayout
+        android:id="@+id/root_view_login_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/white"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:textColorHint="#D3CBCB"
+            android:textSize="17sp"
+            android:hint="User Name" />
+
+
+        <EditText
+            android:id="@+id/et_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/white"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#D3CBCB"
+            android:textSize="17sp"
+            android:hint="Email" />
+
+        <TextView
+            android:id="@+id/tv_login_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/login_login_hint"
+            android:textColor="#99A9C6"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:inputType="textPassword"
+            android:textColorHint="#D3CBCB"
+           android:hint="Password" />
+
+        <TextView
+            android:id="@+id/tv_username_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/login_username_hint"
+            android:textColor="#99A9C6"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/tv_btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginRight="16dp"
+            android:background="#674D4D"
+            android:layout_marginBottom="15dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_hidable_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="16dp"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chb_login_save"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_label_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_7_5"
+                android:text="Already a Creditgaea User? "/>
+
+            <TextView
+                android:id="@+id/tv_btn_login_signup"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:padding="@dimen/dp_12"
+                android:textSize="@dimen/sp_8"
+                android:text="Log In"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/waitScreen"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    android:focusable="true"
+    android:clickable="true">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.Material.Light.ProgressBar.Large.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        tools:targetApi="lollipop">
+
+    </ProgressBar>
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="@dimen/sp_9"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="0%"/>
+
+</RelativeLayout>

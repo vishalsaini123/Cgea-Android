@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "597069052706",
+    "project_id": "creditgea",
+    "storage_bucket": "creditgea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597069052706:android:15ba52e73308bc7f54437b",
+        "android_client_info": {
+          "package_name": "com.creditgaea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597069052706-ig6bom0pkcub11nlc7kldolufm81v5b7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5sCxpvXTq_O6MjXXMjwS48n1ouhl7g44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597069052706-ig6bom0pkcub11nlc7kldolufm81v5b7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

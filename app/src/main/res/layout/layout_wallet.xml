@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_screenView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/applogomain" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_screenView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/lin_netscore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="left"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:textColor="@color/white"
+                android:layout_above="@+id/list_logs"
+                android:text="C-Gaea Wallet"/>
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:textColor="@color/white"
+                android:layout_above="@+id/list_logs"
+                android:text="Cgaea Wallet ID : Test"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_wallet"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:textSize="@dimen/sp_8"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_above="@+id/list_logs"
+                android:text="Available Cgaea Balance $ 0 "/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lin_netscore"
+                    android:layout_margin="@dimen/dp_12"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:textSize="@dimen/sp_7_5"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_4"
+                    android:textAllCaps="false"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/login_background_button_active"
+                    android:layout_alignParentBottom="true"
+                    android:text="Send\nCgaea\n$"/>
+
+
+                <Button
+                    android:id="@+id/btn_request"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lin_netscore"
+                    android:layout_margin="@dimen/dp_12"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:padding="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/sp_7_5"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/login_background_button_active"
+                    android:layout_alignParentBottom="true"
+                    android:text="Incoming Payment Log"/>
+
+                <Button
+                    android:id="@+id/btn_request_send"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lin_netscore"
+                    android:layout_margin="@dimen/dp_12"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:padding="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/sp_7_5"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/login_background_button_active"
+                    android:layout_alignParentBottom="true"
+                    android:text="Send Cgaea \nInvoice"/>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_wallet_record"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lin_netscore"
+                android:layout_margin="@dimen/dp_12"
+                android:minHeight="100dp"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                android:padding="@dimen/dp_4"
+                android:textAllCaps="false"
+                android:textSize="@dimen/sp_7_5"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@drawable/login_background_button_active"
+                android:layout_alignParentBottom="true"
+                android:text="Record \n of \n Cgaea $ Added \nto Wallet"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_sent_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lin_netscore"
+                    android:layout_margin="@dimen/dp_12"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:textSize="@dimen/sp_7_5"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_4"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/login_background_button_active"
+                    android:layout_alignParentBottom="true"
+                    android:textAllCaps="false"
+                    android:text="Cgaea$ Transaction \nRecord"/>
+
+
+                <Button
+                    android:id="@+id/btn_request_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lin_netscore"
+                    android:layout_margin="@dimen/dp_12"
+                    android:textColor="@color/white"
+                    android:visibility="visible"
+                    android:padding="@dimen/dp_4"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_7_5"
+                    android:textAllCaps="false"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/login_background_button_active"
+                    android:layout_alignParentBottom="true"
+                    android:text="Payment Log"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

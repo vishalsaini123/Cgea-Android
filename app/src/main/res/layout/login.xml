@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+
+    android:orientation="vertical">
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="#09B806">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/main_screenView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/applogomain" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_screenView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/text_label_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_8"
+                android:gravity="center"
+                android:text="Welcome Greta Thunberg"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+              />
+            <!--            <TextView-->
+            <!--                android:id="@+id/text_label"-->
+            <!--                android:layout_below="@+id/text_label_credit"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="Username"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                android:textSize="20sp"/>-->
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/editlabel_name"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/text_label"-->
+            <!--                android:padding="5dp"-->
+            <!--                android:background="#351A07"-->
+            <!--                android:cursorVisible="true"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                />-->
+            <RelativeLayout
+                android:id="@+id/text_welcome_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/text_label_credit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/black_bg">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="5dp"
+
+                    android:text="Welcome to credit Gaea"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/text_welcome_credit">
+
+                <TextView
+                    android:id="@+id/text_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:text="Welcome Greta Thunberg"
+                    android:textColor="#ffffff"
+                    android:textSize="19dp"
+                    android:visibility="visible"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/editlabel_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#66351A07"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"
+                    android:hint="Enter Username"
+                    android:textColorHint="@color/white"
+                    android:cursorVisible="true"
+                    android:padding="5dp"
+                    android:textColor="#FFFFFF" />
+
+
+
+                <TextView
+                    android:id="@+id/editlabel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_label2"
+                    android:padding="4dp"
+                    android:hint="Select Date"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:drawableLeft="@drawable/ic_check"
+                    android:visibility="visible"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white" />
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewlabel2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/lin_user"
+                android:background="#FFFFFF" />
+
+
+            <TextView
+                android:id="@+id/text_label2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewlabel2"
+                android:gravity="center"
+                android:padding="@dimen/dp_16"
+                android:visibility="visible"
+                android:text="Carbon Footprint"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_label2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnmode1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:drawableTop="@drawable/ic_road_48"
+                        android:background="@color/transparent"
+                        android:text="Road"
+                        android:textSize="@dimen/sp_7_5"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+                    <!--                    android:drawableRight="@drawable/arrow_next"-->
+
+                    <Button
+                        android:id="@+id/btnmode2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:drawableTop="@drawable/ic_air_48"
+                        android:background="@color/transparent"
+                        android:text="Air"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:src="@drawable/ic_air_48"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btnmode3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textAllCaps="false"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:drawableTop="@drawable/ic_water_48"
+                        android:text="Water"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:src="@drawable/ic_water"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:orientation="horizontal">
+
+
+
+                    <Button
+                        android:id="@+id/btnmode4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:drawableTop="@drawable/ic_home_48"
+                        android:text="Home"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:background="@color/transparent"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btnWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:drawableTop="@drawable/ic_wallet"
+                        android:text="Wallet"
+                        android:paddingTop="@dimen/dp_10"
+                        android:textAllCaps="false"
+                        android:gravity="bottom|center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:background="@color/transparent"
+                        android:visibility="visible" />
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:drawableTop="@drawable/ic_food_48"
+                        android:text="Food"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:background="@color/transparent"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_health_48"
+                        android:text="Daily Health"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:background="@color/transparent"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_doc_48"
+                        android:text="DocDash"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:background="@color/transparent"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_video_48"
+                        android:text="Video Call"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:textAllCaps="false"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:visibility="visible" />
+
+                    <Button
+
+                        android:id="@+id/btn_chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:drawableTop="@drawable/ic_text_48"
+                        android:text="Text Messenger"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/dp_6"
+                        android:textAllCaps="false"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_6"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btnmodechecklast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_book_48"
+                        android:text="Daily\n Carbon Footprint\n Log"
+                        android:gravity="center"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/sp_7_5"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_deailylog"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_book_48"
+                        android:text="Daily\n Health\n Log"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:textAllCaps="false"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_7_5"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--</ScrollView>-->
+</ScrollView>
+

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/airplanescreen">
+    <!--android:background="#351A07"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/main_screenView"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/applogomain" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_screenView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/first_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_jet"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/air_jet" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/image_jet"
+                        android:orientation="vertical"
+                        android:id="@+id/linearLayout">
+
+                        <TextView
+                            android:id="@+id/text_label_auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Airplane/Jet Engine"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_air_jet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/checkbox_air_jet"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                    <!--  <CheckBox
+                          android:id="@+id/checkbox_air_jet"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentRight="true"
+                          android:layout_marginLeft="4dp"
+                          android:button="@drawable/form_un_check_box"
+                          android:checked="false" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/second_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_submode_layout"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_nonjet"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/air_nonjet" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/image_nonjet"
+                        android:orientation="vertical"
+                        android:id="@+id/linearLayout2">
+
+                        <TextView
+                            android:id="@+id/text_label_auto_diesel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Airplane/Non-Jet Engine"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_air_nonjet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto_diesel"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/checkbox_air_nonjet"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignBottom="@+id/linearLayout2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                    <!-- <CheckBox
+                         android:id="@+id/checkbox_air_nonjet"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginLeft="4dp"
+                         android:button="@drawable/form_un_check_box"
+                         android:checked="false" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/third_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_submode_layout"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_solar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/air_solar" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/image_solar"
+                        android:orientation="vertical"
+                        android:id="@+id/linearLayout3">
+
+                        <TextView
+                            android:id="@+id/text_label_auto_hybrid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Airplane/Solar Engine"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_air_solar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto_hybrid"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/checkbox_air_solar"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignBottom="@+id/linearLayout3"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                    <!--<CheckBox
+                        android:id="@+id/checkbox_air_solar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="4dp"
+                        android:button="@drawable/form_un_check_box"
+                        android:checked="false" />-->
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/third_submode_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/credit_login_btnshape"
+                    android:padding="10dp"
+                    android:text="Save"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/waitScreen"
+        layout="@layout/waitlayout"
+        />
+
+</FrameLayout>

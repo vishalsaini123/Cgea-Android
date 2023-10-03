@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/boatshipscreen"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--  android:background="#351A07"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/main_screenView"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/applogomain"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_screenView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/first_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ship_gaso"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/ship_gasoline" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ship_gaso"
+                        android:orientation="vertical"
+                        android:id="@+id/linearLayout7">
+                        <TextView
+                            android:id="@+id/text_label_auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Boad/Ship/Gasoline Engine"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_water_gasoline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/checkbox_water_gasoline"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignBottom="@+id/linearLayout7" />
+                    <!-- <CheckBox
+                         android:id="@+id/checkbox_water_gasoline"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:button="@drawable/form_un_check_box"
+                         android:layout_marginLeft="4dp"
+                         android:checked="false" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/third_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/second_submode_layout"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ship_wind"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/ship_wind" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ship_wind"
+                        android:orientation="vertical"
+                        android:id="@+id/linearLayout9">
+                        <TextView
+                            android:id="@+id/text_label_auto_hybrid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Boad/Ship/Wind Energy"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_water_wind"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto_hybrid"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/checkbox_water_wind"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignBottom="@+id/linearLayout9"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                    <!-- <CheckBox
+                         android:id="@+id/checkbox_water_wind"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:button="@drawable/form_un_check_box"
+                         android:layout_marginLeft="4dp"
+                         android:checked="false" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fourth_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/third_submode_layout"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/ship_solar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/ship_solar" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ship_solar"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/text_label_auto_electric"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Boad/Ship/Solar Energy"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_water_solar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto_electric"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/checkbox_water_solar"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="22dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignParentBottom="true" />
+                    <!--<CheckBox
+                        android:id="@+id/checkbox_water_solar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/form_un_check_box"
+                        android:layout_marginLeft="4dp"
+                        android:checked="false" />-->
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/credit_login_btnshape"
+                    android:layout_below="@+id/fourth_submode_layout"
+                    android:padding="10dp"
+                    android:text="Save"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_marginTop="40dp"
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+                <RelativeLayout
+                    android:id="@+id/second_submode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/first_submode_layout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:id="@+id/ship_diesel"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="4dp"
+                        android:src="@drawable/ship_diesel" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ship_diesel"
+                        android:orientation="vertical"
+                        android:id="@+id/linearLayout8">
+                        <TextView
+                            android:id="@+id/text_label_auto_diesel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Boad/Ship/Diesel Engine"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/time_water_diesel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_label_auto_diesel"
+                            android:layout_marginTop="5dp"
+                            android:text="Total Time- 00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/checkbox_water_diesel"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:background="@drawable/tab_selector"
+                        android:text="Select"
+                        android:layout_alignBottom="@+id/linearLayout8"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                    <!-- <CheckBox
+                         android:id="@+id/checkbox_water_diesel"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:button="@drawable/form_un_check_box"
+                         android:layout_marginLeft="4dp"
+                         android:checked="false" />-->
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/waitScreen"
+        layout="@layout/waitlayout"
+        />
+</FrameLayout>

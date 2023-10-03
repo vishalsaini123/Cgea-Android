@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_screenView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_alignParentTop="true"
+      >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/applogomain" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_screenView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+       >
+
+        <LinearLayout
+            android:id="@+id/lin_netscore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_netscore"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_above="@+id/list_logs"
+                android:text="Wallet : 0"/>
+
+            <TextView
+                android:id="@+id/tv_earn"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:textSize="@dimen/sp_7_5"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_above="@+id/list_logs"
+                android:text="Earned : 0"/>
+
+            <TextView
+                android:id="@+id/tv_transaction"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:textSize="@dimen/sp_7_5"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_above="@+id/list_logs"
+                android:text="Transactions : 0"/>
+
+
+        </LinearLayout>
+
+
+
+        <ListView
+           android:layout_below="@+id/lin_netscore"
+            android:id="@+id/list_logs"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/btn_transfer"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin_netscore"
+            android:layout_margin="@dimen/dp_12"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/login_background_button_active"
+            android:layout_alignParentBottom="true"
+            android:text="Transfer To Wallet"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_nonlogview"
+            android:visibility="gone"
+            android:layout_below="@+id/lin_netscore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="No logs available"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

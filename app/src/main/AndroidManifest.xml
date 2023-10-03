@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.quickblox.sample.videochat.java">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.quickblox.sample.messages.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+
+    <uses-permission android:name="com.quickblox.sample.chat.java.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.creditgaea.sample.credit.java.App"
+        android:allowBackup="false"
+        android:icon="@drawable/credit_gaea_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            >
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.ListRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.AirModeSelectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.WaterModeSelectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.GroundModeSelectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.HomeModeSelectedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+        <activity android:name="com.creditgaea.sample.credit.java.creditgea.activity.PastLogsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar"
+            android:launchMode="singleTop"/>
+
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.activities.OpponentsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.creditgaea.sample.credit.java.activities.PermissionsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.activities.CallActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.activities.SettingsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.activities.AppInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.creditgaea.sample.credit.java.services.LoginService" />
+
+        <service android:name="com.creditgaea.sample.credit.java.services.CallService" />
+
+        <service android:name="com.creditgaea.sample.credit.java.services.fcm.PushListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.quickblox.messages.services.fcm.QBFcmPushInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.quickblox.messages.TYPE"
+            android:value="GCM" />
+
+        <meta-data
+            android:name="com.quickblox.messages.SENDER_ID"
+            android:value="@string/sender_id" />
+
+        <meta-data
+            android:name="com.quickblox.messages.QB_ENVIRONMENT"
+            android:value="DEVELOPMENT" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4b96a3f33893a42103eae91d2166d0c517b833d3" />
+
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.creditgea.activity.LoginActivity"
+           android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.creditgaea.sample.credit.java.creditgea.activity.SplashActivity"
+            android:label="@string/login_toolbar_title"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.SelectUsersActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.DialogsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.NewGroupActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.ChatInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.ForwardToActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.MessageInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.AttachmentImageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.AttachmentVideoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.creditgaea.sample.credit.java.chat.ui.activity.AppInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.creditgaea.sample.credit.java.chat.fcm.PushListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.quickblox.messages.services.fcm.QBFcmPushInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+        <meta-data
+            android:name="com.quickblox.messages.QB_ENVIRONMENT"
+            android:value="DEVELOPMENT" />
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+    </application>
+
+
+</manifest>

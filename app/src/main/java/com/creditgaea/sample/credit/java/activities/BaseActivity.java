@@ -1,0 +1,147 @@
+package com.creditgaea.sample.credit.java.activities;
+
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.View;
+
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import com.creditgaea.sample.credit.java.App;
+import com.quickblox.sample.videochat.java.R;
+import com.creditgaea.sample.credit.java.util.QBResRequestExecutor;
+import com.creditgaea.sample.credit.java.utils.ErrorUtils;
+import com.creditgaea.sample.credit.java.utils.SharedPrefsHelper;
+
+import static android.graphics.Typeface.BOLD;
+
+/**
+ * QuickBlox team
+ */
+public abstract class BaseActivity extends AppCompatActivity {
+
+    protected ActionBar actionBar;
+    protected SharedPrefsHelper sharedPrefsHelper;
+    private ProgressDialog progressDialog;
+    protected QBResRequestExecutor requestExecutor;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        actionBar = getSupportActionBar();
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setIcon(R.drawable.credit_gaea_logo);
+        }
+          requestExecutor = App.getInstance().getQbResRequestExecutor();
+        sharedPrefsHelper = SharedPrefsHelper.getInstance();
+    }
+
+    public void initDefaultActionBar() {
+        String currentUserFullName = "";
+        if (sharedPrefsHelper.getQbUser() != null) {
+            currentUserFullName = sharedPrefsHelper.getQbUser().getFullName();
+        }
+
+        setActionBarTitle("");
+        actionBar.setIcon(R.drawable.credit_gaea_logo);
+        String sourceString = "<b>" + currentUserFullName + "</b> ";
+        SpannableString s = new SpannableString(currentUserFullName);
+        s.setSpan(BOLD, 0, s.length(),
+                Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+
+        setActionbarSubTitle("  Logged in as "+""+s);
+    }
+
+    public void setActionBarTitle(int title) {
+        if (actionBar != null) {
+            actionBar.setTitle(title);
+        }
+    }
+
+    public void setActionBarTitle(CharSequence title) {
+        if (actionBar != null) {
+            actionBar.setTitle(title);
+        }
+    }
+
+    public void setActionbarSubTitle(String subTitle) {
+        if (actionBar != null)
+            actionBar.setSubtitle(subTitle);
+    }
+
+    public void removeActionbarSubTitle() {
+        if (actionBar != null)
+            actionBar.setSubtitle(null);
+    }
+
+    void showProgressDialog(@StringRes int messageId) {
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setIndeterminate(true);
+            progressDialog.setCancelable(false);
+            progressDialog.setCanceledOnTouchOutside(false);
+
+            // Disable the back button
+            DialogInterface.OnKeyListener keyListener = new DialogInterface.OnKeyListener() {
+                @Override
+                public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                    return keyCode == KeyEvent.KEYCODE_BACK;
+                }
+            };
+            progressDialog.setOnKeyListener(keyListener);
+        }
+        progressDialog.setMessage(getString(messageId));
+        progressDialog.show();
+    }
+
+    void hideProgressDialog() {
+        if (progressDialog != null) {
+            try {
+                progressDialog.dismiss();
+            } catch (IllegalArgumentException ignored) {
+
+            }
+        }
+    }
+
+    protected void showErrorSnackbar(@StringRes int resId, Exception e,
+                                     View.OnClickListener clickListener) {
+        View rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+        if (rootView != null) {
+            ErrorUtils.showSnackbar(rootView, resId, e, R.string.dlg_retry, clickListener);
+        }
+    }
+
+    protected boolean checkPermission(String[] permissions) {
+        for (String permission : permissions) {
+            if (checkPermission(permission)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean checkPermission(String permission) {
+        return ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_DENIED;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
